@@ -1,14 +1,16 @@
+from aocd import get_data
+
 lines = []
 
-with open('inp.txt', 'r') as file:
-	data = file.readlines()
-	for line in data:
-		split = line.rstrip().split(" ")
-		newLine = []
-		for spli in split:
-			newLine.append(int(spli))
-		
-		lines.append(newLine)
+
+data = get_data(day=2, year=2024).split("\n")
+for line in data:
+	split = line.rstrip().split(" ")
+	newLine = []
+	for spli in split:
+		newLine.append(int(spli))
+	
+	lines.append(newLine)
 
 def is_safe(report):
 	if len(report) < 2:

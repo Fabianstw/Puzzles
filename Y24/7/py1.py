@@ -1,5 +1,7 @@
 from itertools import product
 
+from aocd import get_data
+
 
 def checkSum(goal, values):
 	for comb in product(['+', '*'], repeat=len(values) - 1):
@@ -15,13 +17,13 @@ def checkSum(goal, values):
 
 
 res = 0
-with open('inp.txt', 'r') as file:
-	for line in file:
-		line = line.strip()
-		key, value = line.split(': ', 1)
-		numbers = list(map(int, value.strip().split()))
-		if checkSum(int(key), numbers):
-			res += int(key)
+data = get_data(day=3, year=2024).split("\n")
+for line in data:
+	line = line.strip()
+	key, value = line.split(': ', 1)
+	numbers = list(map(int, value.strip().split()))
+	if checkSum(int(key), numbers):
+		res += int(key)
 		
 
 print(f"Result: {res}")

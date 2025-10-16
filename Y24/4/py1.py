@@ -1,11 +1,12 @@
+from aocd import get_data
+
 lines = []
 search = ['X', "M", "A", "S"]
 res = 0
 
-with open('inp.txt', 'r') as file:
-	data = file.readlines()
-	for line in data:
-		lines.append(list(line.rstrip()))
+data = get_data(day=3, year=2024).split("\n")
+for line in data:
+	lines.append(list(line.rstrip()))
 		
 
 for i in range(len(lines)):

@@ -1,8 +1,9 @@
+from aocd import get_data
+
 def readInput():
 	connections = {}
 	dmap = []
-	with open('inp.txt', 'r') as file:
-		data = file.readlines()
+	data = get_data(day=3, year=2024).split("\n")
 	for i in range(len(data)):
 		splitted = list(data[i])[0:len(data[i]) - 1]
 		dmap.append(splitted)

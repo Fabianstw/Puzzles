@@ -1,22 +1,22 @@
+from aocd import get_data
 rules = {}
 messages = []
 
 addRule = True
 
-with open('inp.txt', 'r') as file:
-	data = file.readlines()
-	for line in data:
-		if line == '\n':
-			addRule = False
-			continue
-		if addRule:
-			rule = line.strip().split('|')
-			if rule[0] in rules:
-				rules[rule[0]].append(rule[1])
-			else:
-				rules[rule[0]] = [rule[1]]
+data = get_data(day=3, year=2024).split("\n")
+for line in data:
+	if line == '\n':
+		addRule = False
+		continue
+	if addRule:
+		rule = line.strip().split('|')
+		if rule[0] in rules:
+			rules[rule[0]].append(rule[1])
 		else:
-			messages.append(line.strip().split(","))
+			rules[rule[0]] = [rule[1]]
+	else:
+		messages.append(line.strip().split(","))
 
 
 def checkMessage(rule, message):

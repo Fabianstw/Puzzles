@@ -1,20 +1,20 @@
 import copy
+from aocd import get_data
 
 # too high 2140
 
 dmap = []
 initPos = (-1, -1)
 
-with open('inp.txt', 'r') as file:
-	data = file.readlines()
-	for i in range(len(data)):
-		newLine = []
-		for j in range(len(data[i])):
-			if data[i][j] != "\n":
-				newLine.append(data[i][j])
-			if data[i][j] == "^":
-				initPos = (i, j)
-		dmap.append(newLine)
+data = get_data(day=3, year=2024).split("\n")
+for i in range(len(data)):
+	newLine = []
+	for j in range(len(data[i])):
+		if data[i][j] != "\n":
+			newLine.append(data[i][j])
+		if data[i][j] == "^":
+			initPos = (i, j)
+	dmap.append(newLine)
 
 
 directions = {"N": (-1, 0), "E": (0, 1), "S": (1, 0), "W": (0, -1)}

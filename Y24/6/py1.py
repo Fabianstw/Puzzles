@@ -1,16 +1,17 @@
+from aocd import get_data
+
 dmap = []
 currPos = (-1, -1)
 
-with open('inp.txt', 'r') as file:
-	data = file.readlines()
-	for i in range(len(data)):
-		newLine = []
-		for j in range(len(data[i])):
-			if data[i][j] != "\n":
-				newLine.append(data[i][j])
-			if data[i][j] == "^":
-				currPos = (i, j)
-		dmap.append(newLine)
+data = get_data(day=3, year=2024).split("\n")
+for i in range(len(data)):
+	newLine = []
+	for j in range(len(data[i])):
+		if data[i][j] != "\n":
+			newLine.append(data[i][j])
+		if data[i][j] == "^":
+			currPos = (i, j)
+	dmap.append(newLine)
 
 
 def moving(d_map, pos):
