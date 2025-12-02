@@ -1,0 +1,45 @@
+# .gitignore
+
+# Rust / Cargo
+/target/
+/**/target/
+
+# Python
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# C++ / build artifacts
+build/
+cmake-build-*/
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+*.dylib
+*.dSYM/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# macOS
+.DS_Store
+
+# Logs and env
+*.log
+.env
+
+# Do not commit any text files
+*.txt
