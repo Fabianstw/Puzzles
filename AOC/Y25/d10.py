@@ -1,4 +1,3 @@
-from scipy.linalg import solve
 from collections import deque
 
 
