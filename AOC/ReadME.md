@@ -4,9 +4,10 @@ Not spotless code :D but it works.
 
 
 ## Years
+- [x] 2025 (_Python_)
 - [x] 2024 (_Python_)
-- [ ] 2023 (_Julia_) **Status 20.12: Postponed, as I want to do year 21 in Rust first**
-- [ ] 2022 (_Cpp_) _To learn cpp usage for HLRA (course at Goethe Univeristy)_
+- [ ] 2023 (_Julia_) 
+- [ ] 2022 (_Cpp_) 
 - [ ] 2021 (_Rust_)
 - [ ] 2020
 - [ ] 2019
