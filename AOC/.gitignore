@@ -30,6 +30,7 @@ cmake-build-*/
 *.dSYM/
 
 # IDEs
+.idea/
 **/.idea/
 Leet/Ruby/.idea/
 .vscode/
