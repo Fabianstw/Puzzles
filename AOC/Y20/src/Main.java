@@ -8,6 +8,10 @@ public class Main {
 //    D6.run();
 //    D7.run();
 //    D8.run();
-    D9.run();
+//    D9.run();
+//    D10.run();
+//    D11.run();
+//    D12.run();
+    D13.run();
   }
 }
