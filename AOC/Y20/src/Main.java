@@ -15,6 +15,9 @@ public class Main {
 //    D13.run();
 //    D14.run();
 //    D15.run();
-    D16.run();
+//    D16.run();
+//    D17.run();
+//    D18.run();
+    D19.run();
   }
 }
